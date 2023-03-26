@@ -5,6 +5,7 @@ import {
   Button,
   FlatList,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import database from '@react-native-firebase/database';
@@ -68,6 +69,26 @@ const App = () => {
       console.log(error);
     }
   };
+
+  const deletetodo = async (item, indexx) => {
+    try {
+      Alert.alert('alert', `Want to delete${item.name}`, [
+        {text: 'cancel', onPress: async () => {}},
+        {
+          text: 'ok',
+          onPress: async () => {
+            try {
+              const response = await database().ref(`todo/${indexx}`).remove();
+            } catch (error) {
+              console.log(error);
+            }
+          },
+        },
+      ]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <View>
       <Text>todos</Text>
@@ -91,6 +112,9 @@ const App = () => {
                 <TouchableOpacity
                   onPress={() => {
                     populatefieldstoupdate(item.item, index);
+                  }}
+                  onLongPress={() => {
+                    deletetodo(item.item, index);
                   }}>
                   <View style={{backgroundColor: 'black', marginTop: 5}}>
                     <Text style={{color: 'white'}}>{item.item.name}</Text>
