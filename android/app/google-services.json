@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "126655159907",
+    "project_id": "todos-f4502",
+    "storage_bucket": "todos-f4502.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126655159907:android:9bfbef9e7384b54927e256",
+        "android_client_info": {
+          "package_name": "com.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126655159907-ngia4ilkp2i00u7drcehr03ro4qq150o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7xZFknr-lxdQzjYzdV7ikY9QP5tluJEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126655159907-ngia4ilkp2i00u7drcehr03ro4qq150o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
