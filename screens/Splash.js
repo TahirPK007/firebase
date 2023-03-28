@@ -9,11 +9,11 @@ const Splash = ({navigation}) => {
       const unsubscribe = await auth().onAuthStateChanged(user => {
         const isUserlogin = user !== null ? 'Home' : 'Login';
         // navigation.navigate(isUserlogin);
+        unsubscribe();
         navigation.dispatch(StackActions.replace(isUserlogin));
 
         console.log(user);
       });
-      unsubscribe();
     }, 2000);
   }, []);
 

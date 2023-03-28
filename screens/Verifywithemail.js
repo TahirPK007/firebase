@@ -85,23 +85,6 @@ const Verifywithemail = () => {
           secureTextEntry={true}
         />
         <Button title="Signup" onPress={signup} />
-        <TouchableOpacity
-          style={{
-            backgroundColor: 'black',
-            borderRadius: 20,
-            marginTop: 10,
-            height: 50,
-            width: 300,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => {
-            navigation.navigate('Login');
-          }}>
-          <Text style={{color: 'white'}}>
-            Already Have An Account? Click Here
-          </Text>
-        </TouchableOpacity>
       </View>
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Login</Text>
@@ -134,21 +117,6 @@ const Verifywithemail = () => {
           secureTextEntry={true}
         />
         <Button title="Signin" onPress={login} />
-        <TouchableOpacity
-          style={{
-            backgroundColor: 'black',
-            borderRadius: 20,
-            marginTop: 10,
-            height: 50,
-            width: 200,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => {
-            navigation.navigate('Signup');
-          }}>
-          <Text style={{color: 'white'}}>Don't Have Account? Click Here</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
