@@ -8,6 +8,7 @@ import Signup from './Signup';
 import Home from './Home';
 import auth from '@react-native-firebase/auth';
 import Splash from './Splash';
+import ImageUpload from './ImageUpload';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const MainNavigator = () => {
         <Stack.Screen name="Signup" component={Signup} />
 
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="ImageUpload" component={ImageUpload} />
       </Stack.Navigator>
     </NavigationContainer>
   );

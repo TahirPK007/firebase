@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity,Button} from 'react-native';
 import React from 'react';
 import auth from '@react-native-firebase/auth';
 import {StackActions} from '@react-navigation/native';
@@ -30,6 +30,10 @@ const Home = ({route, navigation}) => {
         }}>
         <Text style={{color: 'white'}}>Logout</Text>
       </TouchableOpacity>
+      <Button
+      title='Go to ImagePage'
+      onPress={()=>{navigation.navigate("ImageUpload")}}
+      />
     </View>
   );
 };
